@@ -1,0 +1,47 @@
+<svg
+  width="240"
+  height="120"
+  viewBox="0 0 240 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background (optional, remove if you want transparent) -->
+  <!-- <rect width="240" height="120" rx="24" fill="#FBE6E0"/> -->
+
+  <!-- Pin Icon -->
+  <path
+    d="M60 28
+       C48 28 40 36 40 48
+       C40 64 60 84 60 84
+       C60 84 80 64 80 48
+       C80 36 72 28 60 28Z"
+    fill="#F48C75"
+  />
+  <circle cx="60" cy="48" r="6" fill="#FBE6E0"/>
+
+  <!-- Sparkles -->
+  <path d="M82 24 L84 28 L88 30 L84 32 L82 36 L80 32 L76 30 L80 28 Z" fill="#F48C75"/>
+  <path d="M90 38 L91 40 L93 41 L91 42 L90 44 L89 42 L87 41 L89 40 Z" fill="#F48C75"/>
+
+  <!-- Pinny Text -->
+  <path
+    d="M96 78
+       C96 56 120 48 134 48
+       C154 48 164 58 164 70
+       C164 86 146 92 134 92
+       C120 92 96 90 96 78Z"
+    fill="none"
+  />
+
+  <text
+    x="100"
+    y="78"
+    font-family="cursive"
+    font-size="44"
+    fill="#F48C75"
+    font-weight="600"
+    style="letter-spacing: -1px"
+  >
+    Pinny
+  </text>
+</svg>
