@@ -9,6 +9,9 @@
     --dark-light: #2d2d2d;
     --primary: #7e5e49;
     --secondary: #f34f8b;
+    --blue-color: #90e0ef;
+    --green-color: #98c9a3;
+    --purple-color: #f2a8ff;
 }
 
 @theme inline {
@@ -20,12 +23,16 @@
     --color-dark-light: var(--dark-light);
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+    --color-bluecolor: var(--blue-color);
+    --color-greencolor: var(--green-color);
+    --color-purplecolor: var(--purple-color);
 
     --font-heading: var(--font-heading);
     --font-taylerSwift: var(--font-tayler-Swift);
     --font-quickSand: var(--font-Quicksand);
     --font-nunito: var(--font-Nunito);
     --font-dotted: var(--dotted-font);
+    --font-shadows : var(--font-Shadows-Into-Light);
 
     --font-weight-light: 300;
     --font-weight-normal: 400;

@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 import { forwardRef, ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
 
-type FolderColor = "pink" | "cream" | "blue" | "green";
+type FolderColor = "pink" | "purple" | "blue" | "green";
 
 const folderColors: Record<FolderColor, { tab: string; body: string; front: string }> = {
     pink: {
@@ -10,7 +10,7 @@ const folderColors: Record<FolderColor, { tab: string; body: string; front: stri
         body: "#ff8fab",
         front: "#fb6f92",
     },
-    cream: {
+    purple: {
         tab: "#ffc9ff",
         body: "#ffb7ff",
         front: "#f2a8ff",

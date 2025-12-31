@@ -18,11 +18,11 @@ export default function CollectionPage() {
                 {/* </div> */}
                 <div className='grid md:grid-cols-6 grid-cols-2 md:gap-4 gap-2 w-full'>
                     <CollectionCard href='/' label='movies' color='pink' />
-                    <CollectionCard href='/' label='Books' color='cream' />
+                    <CollectionCard href='/' label='Books' color='purple' />
                     <CollectionCard href='/' label='Reels' color='blue' />
                     <CollectionCard href='/' label='Trips' color='green' />
                     <CollectionCard href='/' label='movies' color='pink' />
-                    <CollectionCard href='/' label='Books' color='cream' />
+                    <CollectionCard href='/' label='Books' color='purple' />
                     <CollectionCard href='/' label='Reels' color='blue' />
                     <CollectionCard href='/' label='Trips' color='green' />
                 </div>

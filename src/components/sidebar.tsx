@@ -10,6 +10,11 @@ import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { cn } from "@/lib/cn";
 import { Button } from "./ui/button";
+import Image from "next/image";
+import { toast } from "sonner";
+import { VisionBoard } from "./dashboard_components/visionboard";
+import { HeartIcon } from "./ui/icons/heart";
+import { VisionIcon } from "./ui/icons/vision";
 
 export const Sidebar = () => {
     const pathname = usePathname();
@@ -21,26 +26,31 @@ export const Sidebar = () => {
             <div className=''>
                 <Logo />
             </div>
-            <Button asChild variant={"secondary"} className="fixed md:top-5 md:right-10 px-5 md:bottom-auto bottom-3 right-4 z-99">
-                <Link href={"/"} >
-                    Upgrade
-                </Link>
+            <Button
+                onClick={() =>
+                    toast.info("This feature is not available yet", {
+                        description: "You don't have to upgrade for now , for more feature contact the developer",
+                    })
+                }
+                variant={"secondary"}
+                className='fixed md:top-5 md:right-10 px-5 md:bottom-auto bottom-3 right-4 z-99'>
+                Upgrade
             </Button>
-            
-            <div className="flex flex-col items-center gap-4 bg-cream py-3 px-2 rounded-full relative">
+
+            <div className='flex flex-col items-center gap-4 bg-cream py-3 px-2 rounded-full relative'>
                 {/* Sliding indicator */}
                 {activeIndex !== -1 && (
                     <motion.div
                         initial={false}
                         animate={{
-                            y: activeIndex * 53, // 40px (p-3 + icon) + 16px gap
+                            y: activeIndex * 56, // 40px (icon + padding) + 16px (gap-4)
                         }}
                         transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 30,
                         }}
-                        className={cn("absolute w-10 h-13.5 bg-dark rounded-full z-0", pathname === "/Addons" ? "top-2.5" : "top-2")}
+                        className="absolute w-10 h-10 bg-dark rounded-full z-0 top-3"
                     />
                 )}
                 {SideBarItems.map((items, key) => {
@@ -49,12 +59,31 @@ export const Sidebar = () => {
                         <Link
                             href={items.src}
                             key={key}
-                            className={`relative z-10 p-2 rounded-full ${isActive ? "text-yellow-400" : "text-dark"}`}
-                        >
+                            className={cn(
+                                "relative z-10 p-2 rounded-full transition-colors",
+                                isActive ? "text-yellow-400" : "text-dark"
+                            )}>
                             {items.icon}
                         </Link>
                     );
                 })}
+            </div>
+            <div className='fixed space-y-2  bottom-10'>
+                <Link
+                    href={"/profile"}
+                    className={cn(
+                        "flex flex-col items-center gap-4 py-3 px-2 rounded-full transition-all ease-out",
+                        pathname === "/profile" ? "bg-dark" : "bg-cream"
+                    )}>
+                    <Image
+                        src={"/women.jpg"}
+                        className='size-10 rounded-full'
+                        width={200}
+                        height={200}
+                        alt='profile pic'
+                    />
+                </Link>
+                <h1 className='font-semibold text-xs '>Animesh</h1>
             </div>
         </div>
     );
@@ -70,7 +99,11 @@ const SideBarItems: { icon: ReactNode; src: string }[] = [
         src: "/collections",
     },
     {
-        icon: <AddIcon />,
-        src: "/Addons",
+        icon: <VisionIcon />,
+        src: "/visionboard"
+    },
+    {
+        icon: <HeartIcon />,
+        src: "/favourite-items"
     }
 ];

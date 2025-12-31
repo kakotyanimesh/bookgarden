@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { Toaster } from 'sonner';
 import {
     
     QuicksandFont,
     NunitoFont,
     dottedFont,
     TaylerSwiftFont,
+    Shadows_Into_LightFont
 } from "@/fonts/fonts.config";
 import "./globals.css";
 
@@ -21,8 +23,8 @@ export default function RootLayout({
     return (
         <html
             lang='en'
-            className={`${QuicksandFont.variable} ${NunitoFont.variable} ${TaylerSwiftFont.variable} ${dottedFont.variable}`}>
-            <body>{children}</body>
+            className={`${Shadows_Into_LightFont.variable} ${QuicksandFont.variable} ${NunitoFont.variable} ${TaylerSwiftFont.variable} ${dottedFont.variable}`}>
+            <body>{children} <Toaster  position="top-center" richColors/></body>
         </html>
     );
 }

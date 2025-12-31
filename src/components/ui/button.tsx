@@ -10,12 +10,13 @@ const ButtonVariants = cva(
             variant: {
                 primary: "bg-primary text-cream hover:shadow-primary/20",
                 secondary:
-                    "bg-dark text-cream text-sm  px-5 hover:shadow-primary/20 font-semibold py-2",
+                    "bg-dark text-cream  px-5 hover:shadow-primary/20 font-semibold py-2",
+                tertiary : "bg-blue-500 hover:shadow-primary/20 py-2",
                 transparent:
                     "bg-transparent border border-dark text-dark hover:bg-secondary hover:text-cream focus:ring-2 focus:ring-secondary focus:ring-offset-2",
             },
             size: {
-                default: "px-4 py-2 text-sm",
+                default: "px-4 py-2 md:text-sm text-xs",
             },
         },
         defaultVariants: {
