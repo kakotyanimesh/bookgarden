@@ -11,7 +11,7 @@ const ButtonVariants = cva(
                 primary: "bg-primary text-cream hover:shadow-primary/20",
                 secondary:
                     "bg-dark text-cream  px-5 hover:shadow-primary/20 font-semibold py-2",
-                tertiary : "bg-blue-500 hover:shadow-primary/20 py-2",
+                tertiary : "bg-blue-500 hover:shadow-primary/20 py-2 text-cream",
                 transparent:
                     "bg-transparent border border-dark text-dark hover:bg-secondary hover:text-cream focus:ring-2 focus:ring-secondary focus:ring-offset-2",
             },

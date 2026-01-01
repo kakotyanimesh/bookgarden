@@ -5,14 +5,12 @@ import { Logo } from "./ui/Logo";
 import { HomeIcon } from "./ui/icons/home";
 import Link from "next/link";
 import { CollectionIcon } from "./ui/icons/collections";
-import { AddIcon } from "./ui/icons/add";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { cn } from "@/lib/cn";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { toast } from "sonner";
-import { VisionBoard } from "./dashboard_components/visionboard";
 import { HeartIcon } from "./ui/icons/heart";
 import { VisionIcon } from "./ui/icons/vision";
 
@@ -24,7 +22,7 @@ export const Sidebar = () => {
         <div className='flex fixed z-99 flex-col md:gap-10 gap-4 md:ml-4 ml-3 text-center'>
             {/* have to fix the vouble here on mobile scrolling */}
             <div className=''>
-                <Logo />
+                <Logo href={""} />
             </div>
             <Button
                 onClick={() =>
